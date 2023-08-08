@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=IBM+Plex+Sans:wght@600&family=Merriweather&family=Open+Sans:ital,wght@0,400;1,300&family=Oswald:wght@400;600;700&family=Pacifico&family=Poppins:wght@500&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&family=Sigmar&display=swap');
+
+*{
+    border:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background:#fff;
+    background-position: cover;
+    width: 90vw;
+}
+
+.title{
+    text-align: center;
+    color: #000;
+    font-family: 'Oswald bold', sans-serif;
+    font-size: 35px;
+    padding-top: 10px;
+    font-weight: 700;
+}
+.title:hover{
+    cursor: default;
+}
+
+.bottom-btn-container{
+    width: auto;
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding:40px 100px 40px;
+}
+.add-btn{
+    width: 100px;
+    height: 100px;
+    border: 6px solid #fff;
+    border-radius: 60px;
+    font-size: 50px;
+    color: #fff;
+    background: #273c75;
+    -webkit-transform: 0.4;
+    transform: scale(0.4);
+    opacity: .4;
+    box-shadow: #000 2px 2px;
+}
+
+   
+.add-btn:hover{
+    box-shadow: #000 4px 2px;
+}
+
+.bottom-btn-container:hover > :not(:hover), .add-btn:hover{
+    cursor: pointer;
+    transition: 0.8s;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+    animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+    -webkit-transform: 1;
+    transform: scale(1);
+    -webkit-animation: ease-out;
+    animation: ease-out;
+    opacity: 1;
+    
+}
+
+.gitad{
+    padding: 4px;
+    width: 200px;
+    height: 80px;
+    display: grid;
+    place-items: center;
+    border: 3px solid #fff;
+    border-radius: 60px;
+    box-shadow: #000 4px 4px 4px 4px;
+}
+
+#giticon{
+    width: 40px;
+    height: 40px;
+    margin-top: 1px;
+}
+#linkiten{
+    text-decoration: none;
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: block;
+    font-weight: 200px;
+}
+#linkiten:hover{
+    text-decoration: underline;
+}
+.navbaritens{
+    display: inline;
+}
+
+.naviten{
+    list-style: none;
+    display: inline;
+}
+.navbar{
+    background: #0097e6;
+    width: 111.2%;
+}
+
+#input-text{
+    font-size: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#ModalText{
+    background: none;
+}
+.modal-content{
+    background: #273c75;
+}
+#input-text, #textheader,#input-text, #textheader::placeholder{
+    background: #fff;
+    color: #000;
+}
+
+.table-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 100px;
+    background: rgb(166, 166, 166);
+    width: 160vh;
+    height: 70vh;
+    position: absolute;
+}
+
+.table-position{
+    position: relative;
+    display: flex;
+}
+#tableTxt, th, td{
+    padding: 4px;
+    border: 3px solid #000;
+}

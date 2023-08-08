@@ -5,7 +5,7 @@ const bcrypt = require('bcrypt');
 const { body, validationResult } = require('express-validator');
 app.use(express.json());
 const {PrismaClient} = require("@prisma/client")
-const prima = new PrismaClient()
+const prisma = new PrismaClient()
 
 app.use(cors());
 
@@ -16,9 +16,22 @@ app.listen(8080, function(req, res) {
 
 app.get("/cors", function(req, res) {
 
-    return res.status(200).json({messsage:"Sucesso!"})
+    return res.status(200).json({message:"Sucesso!"})
 })
+//!Still under development
+app.post("/criarNovoTxt", async function(req, res){
+    try{
+        const {title} = req.body.title;
+        const {content} = req.body.content;
+        const newMan = await prisma.author.create({
+            data:{
+                titles: title,
+                description: content,
 
-app.post("/criarNovoTxt", function(req, res){
-    
+            }
+        })
+
+    }catch(err){
+        return res.status(500).json({message:"Error!"})
+    }
 })

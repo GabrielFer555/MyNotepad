@@ -12,7 +12,7 @@ datasource db {
 
 model texts{
   id Int @id @default(autoincrement())
-  title String
+  titles String
   description String?
   dateCreated DateTime
   dateModified DateTime?

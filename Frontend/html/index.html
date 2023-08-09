@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="//cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
     <link rel="stylesheet" href="//cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <link rel="shortcut icon" href="https://www.freeiconspng.com/thumbs/notepad-icon/notepad-icon-4.png">
 </head>
 
 <body>
@@ -60,6 +61,7 @@
                     <textarea disabled class ="form-control input-sm scrollable" name="" id="input-text" cols="40" rows="20" placeholder="Insira o texto aqui"></textarea>
                 </div>
                 <div class="modal-footer" id="modal-edit" style="display:none">
+                    <button class ="btn btn-light" id="btn-color"><img class ="icon_btn" src="https://cdn-icons-png.flaticon.com/512/2919/2919586.png" alt=""></button>
                     <button class ="btn btn-light">**</button>
                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="cancel">Cancelar</button>
                     <button type="button" class="btn btn-success" id="save">Salvar</button>
@@ -128,6 +130,14 @@
             $("#close-btn").on('click', function () {
                 $("#ModalText").modal('hide')
             })
+            $("#save").on('click', function(){
+                $("#modal-new").show();
+                $("#modal-edit").hide();
+                $("#ModalText").modal('hide')
+                mensagem("Salvo com Sucesso!", 1, 1500)
+            })
+            $("")
+
 
         })
 

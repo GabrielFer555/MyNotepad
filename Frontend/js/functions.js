@@ -1,7 +1,4 @@
-import DataTable from 'datatables.net-dt';
-import 'datatables.net-responsive-dt';
-
-    function mensagem(msg,type=1, duration = 1000, x ="left", y ="bottom"){
+   function mensagem(msg,type=1, duration = 1000, x ="left", y ="bottom"){
         const i = new Notyf({
             duration:duration,
             position:{
@@ -16,8 +13,7 @@ import 'datatables.net-responsive-dt';
     }
     
     }
-
-     
-    let table = new DataTable('#tableTxt', {
-        responsive: true
-    });
+function generatecolor(){
+    const randomColor = Math.floor(Math.random()*16777215).toString(16)
+    return randomColor
+}

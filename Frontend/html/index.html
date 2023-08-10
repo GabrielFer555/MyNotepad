@@ -18,7 +18,7 @@
 
     <div class="navbar">
         <ul class="navbaritens">
-            <li class="naviten"><a href="" id="linkiten">My Github</a></li>
+            <li class="naviten"><a href="https://github.com/GabrielFer555" id="linkiten" target="_blank">My Github</a></li>
         </ul>
     </div>
 
@@ -98,6 +98,7 @@
     <script>
 
         $(document).ready(function () {
+            var url = "localhost:8080/";
 
             $(".add-btn").click(function () {
                $("#ModalText").modal("show")
@@ -134,9 +135,12 @@
                 $("#modal-new").show();
                 $("#modal-edit").hide();
                 $("#ModalText").modal('hide')
-                mensagem("Salvo com Sucesso!", 1, 1500)
+                mensagem("Salvo com Sucesso!", 1, 1500, "left", "bottom")
             })
-            $("")
+            $("#btn-color").on('click', async function(){
+                const colorful = await generateColor()
+                $(".modal-content").css("background", colorful)
+            })
 
 
         })

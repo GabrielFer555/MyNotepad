@@ -17,3 +17,16 @@ model texts{
   dateCreated DateTime
   dateModified DateTime?
 }
+
+model apiKey{
+  id Int @id @default(autoincrement())
+  key String 
+  dataBegin DateTime
+  dataEnd DateTime
+}
+
+model users{
+  id Int @id
+  username String
+  password String
+}

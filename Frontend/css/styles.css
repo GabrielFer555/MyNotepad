@@ -69,13 +69,15 @@ body{
     
 }
 
-#linkiten{
+.linkiten{
     text-decoration: none;
     color: #fff;
     font-family: 'Bebas Neue', sans-serif;
-    display: block;
+    display: inline;
     font-weight: 300;
     font-size: 30px;
+    padding-left:20px;
+    transition-delay: 5s ease-in-out;
 }
 #linkiten:hover{
     text-decoration: underline;

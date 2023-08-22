@@ -38,6 +38,8 @@ app.post("/criarNovoTxt", async function(req, res){
     }
 })
 
+
+
 app.post("/auth", async function(req, res){
     try{
         const user = req.headers.username;
@@ -48,10 +50,11 @@ app.post("/auth", async function(req, res){
                  password:password
             }
         })
+        const pastKey = uuid.v4();
         if(findingUser){
-            const pastKey = uuid.v4();
-            
+            return res.status(200).json({pastKey})
         }
+            
     }
     catch(err){
         return res.status(500).json({message:"Something went wrong!"})
@@ -59,7 +62,7 @@ app.post("/auth", async function(req, res){
 }) 
 
 
-async function isKey(pastKey){
+/*async function isKey(pastKey){
     const findKey = await prisma.apiKey.findFirst({
         where:{
             key: null
@@ -73,4 +76,4 @@ async function isKey(pastKey){
             }
         })
     }
-}
+}*/

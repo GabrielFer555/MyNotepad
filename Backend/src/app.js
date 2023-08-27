@@ -5,7 +5,6 @@ const cors = require('cors');
 const bcrypt = require('bcrypt');
 const { body, validationResult } = require('express-validator');
 app.use(express.json());
-const {PrismaClient} = require("@prisma/client")
 const prisma = new PrismaClient()
 
 app.use(cors());
@@ -29,7 +28,7 @@ app.post("/criarNovoTxt", async function(req, res){
             data:{
                 titles: title,
                 description: content,
-
+                
             }
         })
 

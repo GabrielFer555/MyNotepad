@@ -11,7 +11,7 @@ datasource db {
   
   provider = "postgresql"
 //  url      ="postgresql://localhost:5432/DBMASTER?schema=public&channel_binding=disable"
-  url      ="postgresql://postgres:Kenway11+@localhost:5432/DBMASTER?schema=public&channel_binding=disable"
+  url      = env("DATABASE_URL")//"postgresql://postgres:Kenway11+@localhost:5432/DBMASTER?schema=public&channel_binding=disable"
 }
 
 model texts{

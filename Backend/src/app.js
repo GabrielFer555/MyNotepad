@@ -1,9 +1,11 @@
-const uuid = require('uuid');
+import { PrismaClient } from '@prisma/client'
 const express = require("express");
 const app = express();
 const cors = require('cors');
 const bcrypt = require('bcrypt');
 const { body, validationResult } = require('express-validator');
+const bodyParser = require('body-parser');
+const dotenv = require('dotenv').config();
 app.use(express.json());
 const prisma = new PrismaClient()
 
@@ -36,9 +38,6 @@ app.post("/criarNovoTxt", async function(req, res){
         return res.status(500).json({message:"Error!"})
     }
 })
-
-
-
 app.post("/auth", async function(req, res){
     try{
         const user = req.headers.username;

@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "notyf": "^3.10.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2"
   }
 }

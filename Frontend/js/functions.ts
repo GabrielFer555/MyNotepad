@@ -1,9 +1,3 @@
-function generateColor(){
-    const randomColor = Math.floor(Math.random()*16777215).toString(16);
-    const background = `#${randomColor}`;
-    return background
-}
-
 export class Note{
     private title: string;
     private text : string;
@@ -35,7 +29,7 @@ export class Note{
     public setDate(date: string): void {
         this.date = date;
     }
-    public InjectHTML():void{
+    public generateHTML():void{
         
     }
 

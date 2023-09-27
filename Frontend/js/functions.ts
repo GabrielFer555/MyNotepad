@@ -1,11 +1,7 @@
-export class Note{
-    private title: string;
-    private text : string;
-    private date:string;
-    constructor(title:string, text:string, date:string){
-        title = this.title
-    }
 
+export class Note{
+    constructor(private title:string, private text:string, private date:string){        
+    }
     public getTitle(): string {
         return this.title;
     }
@@ -30,8 +26,9 @@ export class Note{
         this.date = date;
     }
     public generateHTML():void{
-        
     }
 
 
 }
+
+
